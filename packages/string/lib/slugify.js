@@ -23,7 +23,7 @@ module.exports = function (string, options = {}) {
 
     // Remove non ascii characters
     // string = unidecode(string);
-    string = encodeURI(string);
+    string = encodeURIComponent(string);
 
     // Replace URL reserved chars: `@:/?#[]!$&()*+,;=` as well as `\%<>|^~£"{}` and \`
     string = string.replace(/(\s|\.|@|:|\/|\?|#|\[|\]|!|\$|&|\(|\)|\*|\+|,|;|=|\\|%|<|>|\||\^|~|"|\{|\}|`|–|—)/g, '-')
